@@ -41,6 +41,11 @@
 1. Copy and paste the JSON files (e.g. `catppuccin-mocha.json`) into `AppData\Local\imhex\themes`, then restart the program
 2. Go to Help -> Settings -> Interface -> Color Theme and select your Catppuccin flavor
 
+## 🙋 FAQ
+
+- Q: **_"What is the font used in the preview?"_**\
+  A: [MesloLGS NF](https://github.com/romkatv/powerlevel10k#how-was-the-recommended-font-created) with font size set to 16.
+
 ## 💝 Thanks to
 
 - [Doriel Rivalet](https://github.com/DorielRivalet)
