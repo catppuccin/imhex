@@ -49,7 +49,7 @@
   A: [MesloLGS NF](https://github.com/romkatv/powerlevel10k#how-was-the-recommended-font-created) with font size set to 16.
 
 - Q: **_"Where is the code used in the preview from?"_**\
-  A: [The sample code comes from this repository](https://github.com/var-username/Monster-Hunter-Frontier-Patterns).
+  A: The sample code comes from [this repository](https://github.com/var-username/Monster-Hunter-Frontier-Patterns).
 
 	
 
