@@ -38,13 +38,20 @@
 
 ### Manual Installation
 
-1. Copy and paste the JSON files (e.g. `catppuccin-mocha.json`) into `AppData\Local\imhex\themes`, then restart the program
-2. Go to Help -> Settings -> Interface -> Color Theme and select your Catppuccin flavor
+1. Clone this repository locally
+2. Open `%LocalAppData%\imhex\themes`
+3. Drag the `.json` files into the `themes` folder
+4. In *ImHex*: Help > Settings > Interface > Color Theme > *(your preferred flavor)*
 
 ## 🙋 FAQ
 
 - Q: **_"What is the font used in the preview?"_**\
   A: [MesloLGS NF](https://github.com/romkatv/powerlevel10k#how-was-the-recommended-font-created) with font size set to 16.
+
+- Q: **_"Where is the code used in the preview from?"_**\
+  A: [The sample code comes from this repository](https://github.com/var-username/Monster-Hunter-Frontier-Patterns).
+
+	
 
 ## 💝 Thanks to
 
