@@ -36,12 +36,14 @@
 
 ## Usage
 
-### Manual Installation
-
 1. Clone this repository locally
-2. Open `%LocalAppData%\imhex\themes`
-3. Drag the `.json` files into the `themes` folder
-4. In *ImHex*: Help > Settings > Interface > Color Theme > *(your preferred flavor)*
+2. Copy the `catppuccin-*.json` files into:
+    - **Windows**: `%LocalAppData%\imhex\themes`
+    - **Linux**: `~/.local/share/imhex/themes`
+
+   If these directories don't work for you, please check what paths are detected in ImHex via:  
+   `Help -> About -> ImHex Directories -> Themes`.
+4. In **ImHex**: `Help > Settings > Interface > Color Theme > (your preferred flavor)`
 
 ## 🙋 FAQ
 
