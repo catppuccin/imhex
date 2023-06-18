@@ -36,14 +36,16 @@
 
 ## Usage
 
-1. Clone this repository locally
-2. Copy the `catppuccin-*.json` files into:
+1. Download your preferred flavour from the
+   [latest release](https://github.com/catppuccin/imhex/releases/latest) or
+   from the [latest build](https://github.com/catppuccin/imhex/actions/workflows/build.yml).
+2. Move the `catppuccin-*.json` files into:
     - **Windows**: `%LocalAppData%\imhex\themes`
     - **Linux**: `~/.local/share/imhex/themes`
 
    If these directories don't work for you, please check what paths are detected in ImHex via:  
    `Help -> About -> ImHex Directories -> Themes`.
-4. In **ImHex**: `Help > Settings > Interface > Color Theme > (your preferred flavor)`
+3. In **ImHex**: `Help -> Settings -> Interface -> Color Theme -> (your preferred flavour)`
 
 ## 🙋 FAQ
 
@@ -53,7 +55,10 @@
 - Q: **_"Where is the code used in the preview from?"_**\
   A: The sample code comes from [this repository](https://github.com/var-username/Monster-Hunter-Frontier-Patterns).
 
-	
+## 👐 Contributing
+
+1. Install requirements via `pip install -r src/pip-requirements.txt`
+2. Generate the JSON files via `python src/make_flavours.py`. The files will be generated under the `build/` directory.
 
 ## 💝 Thanks to
 
