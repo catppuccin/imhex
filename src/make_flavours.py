@@ -27,27 +27,26 @@ def generate_color_with_transparency(color_hex: str) -> str:
     
     return rgba
 
-
 if __name__ == "__main__":
     template = Template(TEMPLATE_STR)
     for flavour, colours in palette().items():
-        # Determine the custom values based on the flavour
+        # Determine the custom values based on the flavor
         theme_base = "Light" if flavour.lower() == "latte" else "Dark"
         image_postfix = f"_{theme_base.lower()}"
         theme_name = f"Catppuccin {flavour.capitalize()}"
         transparent = "#00000000"
         plot_background = f"{colours['blue']}21"
 
-        # Create a copy of the colours dictionary
-        modified_colours = colours.copy()
+        # Create a new dictionary to store modified colors
+        modified_colours = dict(colours)
 
-        # Generate colour values with transparency
-        for color_name, color_value in modified_colours.items():
+        # Generate color values with transparency
+        for color_name, color_value in colours.items():
             if color_name.endswith("7f"):
-                # Skip colours that already have transparency
+                # Skip colors that already have transparency
                 continue
             if color_value.startswith("#"):
-                # Generate colour with transparency
+                # Generate color with transparency
                 color_with_transparency = generate_color_with_transparency(color_value)
                 modified_colours[color_name + "7f"] = color_with_transparency
 
