@@ -57,7 +57,7 @@
 
 ## 👐 Contributing
 
-1. Install requirements via `pip install -r src/pip-requirements.txt`
+1. Install requirements via `pip install -r requirements.txt`
 2. Generate the JSON files via `python src/make_flavours.py`. The files will be generated under the `build/` directory.
 
 ## 💝 Thanks to

@@ -5,7 +5,7 @@ on:
     paths:
       - "src/**/*.py"
       - "src/flavour-template.json"
-      - "src/pip-requirements.txt"
+      - "requirements.txt"
 
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: '3.10'
           cache: 'pip' # caching pip dependencies
-      - run: pip install -r src/pip-requirements.txt
+      - run: pip install -r requirements.txt
       - run: python src/make_flavours.py
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
