@@ -1,0 +1,312 @@
+{
+  "base": "$theme_base",
+  "colors": {
+      "imgui": {
+          "border": "$subtext0",
+          "border-shadow": "$subtext1",
+          "button": "$blue7f",
+          "button-active": "$lavender",
+          "button-hovered": "$sky7f",
+          "check-mark": "$blue",
+          "child-background": "$mantle",
+          "docking-empty-background": "$base",
+          "docking-preview": "$sky",
+          "drag-drop-target": "$sapphire",
+          "frame-background": "$base",
+          "frame-background-active": "$lavender",
+          "frame-background-hovered": "$sky7f",
+          "header": "$sapphire7f",
+          "header-active": "$lavender7f",
+          "header-hovered": "$sky7f",
+          "menu-bar-background": "$base",
+          "modal-window-dim-background": "$subtext17f",
+          "nav-highlight": "$lavender",
+          "nav-windowing-background": "$text",
+          "nav-windowing-highlight": "$overlay0",
+          "plot-histogram": "$yellow",
+          "plot-histogram-hovered": "$peach7f",
+          "plot-lines": "$subtext0",
+          "plot-lines-hovered": "$pink7f",
+          "popup-background": "$base",
+          "resize-grip": "$overlay1",
+          "resize-grip-active": "$lavender",
+          "resize-grip-hovered": "$sky7f",
+          "scrollbar-background": "$base",
+          "scrollbar-grab": "$overlay1",
+          "scrollbar-grab-active": "$lavender",
+          "scrollbar-grab-hovered": "$sky7f",
+          "separator": "$overlay1",
+          "separator-active": "$lavender",
+          "separator-hovered": "$sky7f",
+          "slider-grab": "$overlay0",
+          "slider-grab-active": "$lavender",
+          "tab": "$overlay0",
+          "tab-active": "$lavender7f",
+          "tab-hovered": "$sky7f",
+          "tab-unfocused": "$overlay17f",
+          "tab-unfocused-active": "$overlay07f",
+          "table-border-light": "$overlay1",
+          "table-border-strong": "$overlay2",
+          "table-header-background": "$overlay0",
+          "table-row-background": "$mantle",
+          "table-row-background-alt": "$crust",
+          "text": "$text",
+          "text-disabled": "$overlay1",
+          "text-selected-background": "$surface27f",
+          "title-background": "$mantle",
+          "title-background-active": "$mantle",
+          "title-background-collapse": "$mantle",
+          "window-background": "$base"
+      },
+      "imhex": {
+          "desc-button": "$surface1",
+          "desc-button-active": "$lavender",
+          "desc-button-hovered": "$sky7f",
+          "highlight": "$green",
+          "toolbar-blue": "$blue",
+          "toolbar-brown": "$rosewater",
+          "toolbar-gray": "$overlay1",
+          "toolbar-green": "$green",
+          "toolbar-purple": "$mauve",
+          "toolbar-red": "$red",
+          "toolbar-yellow": "$yellow"
+      },
+      "imnodes": {
+          "box-selector": "$blue",
+          "box-selector-outline": "$blue7f",
+          "grid-background": "$mantle",
+          "grid-line": "$overlay2",
+          "grid-line-primary": "$overlay1",
+          "link": "$blue",
+          "link-hovered": "$sky",
+          "link-selected": "$lavender",
+          "mini-map-background": "$text7f",
+          "mini-map-background-hovered": "$subtext17f",
+          "mini-map-canvas": "$surface17f",
+          "mini-map-canvas-outline": "$surface07f",
+          "mini-map-link": "$blue",
+          "mini-map-link-selected": "$lavender",
+          "mini-map-node-background": "$surface27f",
+          "mini-map-node-background-hovered": "$surface07f",
+          "mini-map-node-background-selected": "$lavender",
+          "mini-map-node-outline": "$overlay1",
+          "mini-map-outline": "$overlay17f",
+          "mini-map-outline-hovered": "$subtext17f",
+          "node-background": "$overlay0",
+          "node-background-hovered": "$sky7f",
+          "node-background-selected": "$lavender",
+          "node-outline": "$overlay0",
+          "pin": "$blue7f",
+          "pin-hovered": "$sky7f",
+          "title-bar": "$surface0",
+          "title-bar-hovered": "$sky7f",
+          "title-bar-selected": "$lavender"
+      },
+      "implot": {
+          "axis-bg": "$text",
+          "axis-bg-active": "$subtext1",
+          "axis-bg-hovered": "$subtext0",
+          "axis-grid": "$base",
+          "axis-text": "$transparent",
+          "axis-tick": "$subtext17f",
+          "crosshairs": "$text7f",
+          "error-bar": "$transparent",
+          "fill": "$transparent",
+          "frame-bg": "$base",
+          "inlay-text": "$text",
+          "legend-bg": "$overlay0",
+          "legend-border": "$overlay1",
+          "legend-text": "$text",
+          "line": "$transparent",
+          "marker-fill": "$transparent",
+          "marker-outline": "$transparent",
+          "plot-bg": "$plot_background",
+          "plot-border": "$transparent",
+          "selection": "$surface27f",
+          "title-text": "$text"
+      },
+      "text-editor": {
+          "background": "$base",
+          "breakpoint": "$red",
+          "char-literal": "$green",
+          "comment": "$overlay0",
+          "current-line-edge": "$overlay17f",
+          "current-line-fill": "$overlay17f",
+          "current-line-fill-inactive": "$overlay07f",
+          "cursor": "$rosewater",
+          "default": "$overlay1",
+          "error-marker": "$red7f",
+          "identifier": "$overlay2",
+          "keyword": "$mauve",
+          "known-identifier": "$red",
+          "line-number": "$overlay1",
+          "multi-line-comment": "$overlay0",
+          "number": "$peach",
+          "preproc-identifier": "$lavender",
+          "preprocessor": "$subtext0",
+          "punctuation": "$text",
+          "selection": "$surface27f",
+          "string": "$green"
+      }
+  },
+  "image_postfix": "$image_postfix",
+  "name": "$theme_name",
+  "styles": {
+      "imgui": {
+          "alpha": 1.0,
+          "button-text-align": [
+              0.5,
+              0.5
+          ],
+          "cell-padding": [
+              4.0,
+              2.0
+          ],
+          "child-border-size": 1.0,
+          "child-rounding": 0.0,
+          "disabled-alpha": 0.6000000238418579,
+          "frame-border-size": 0.0,
+          "frame-padding": [
+              4.0,
+              3.0
+          ],
+          "frame-rounding": 0.0,
+          "grab-min-size": 12.0,
+          "grab-rounding": 0.0,
+          "indent-spacing": 10.0,
+          "item-inner-spacing": [
+              4.0,
+              4.0
+          ],
+          "item-spacing": [
+              8.0,
+              4.0
+          ],
+          "popup-border-size": 1.0,
+          "popup-rounding": 0.0,
+          "scrollbar-rounding": 9.0,
+          "scrollbar-size": 14.0,
+          "selectable-text-align": [
+              0.0,
+              0.0
+          ],
+          "tab-rounding": 4.0,
+          "window-border-size": 1.0,
+          "window-min-size": [
+              32.0,
+              32.0
+          ],
+          "window-padding": [
+              8.0,
+              8.0
+          ],
+          "window-rounding": 0.0,
+          "window-title-align": [
+              0.0,
+              0.5
+          ]
+      },
+      "imnodes": {
+          "grid-spacing": 24.0,
+          "link-hover-distance": 10.0,
+          "link-line-segments-per-length": 0.10000000149011612,
+          "link-thickness": 3.0,
+          "mini-map-offset": [
+              4.0,
+              4.0
+          ],
+          "mini-map-padding": [
+              8.0,
+              8.0
+          ],
+          "node-border-thickness": 1.0,
+          "node-corner-rounding": 4.0,
+          "node-padding": [
+              8.0,
+              8.0
+          ],
+          "pin-circle-radius": 4.0,
+          "pin-hover-radius": 10.0,
+          "pin-line-thickness": 1.0,
+          "pin-offset": 0.0,
+          "pin-quad-side-length": 7.0,
+          "pin-triangle-side-length": 9.5
+      },
+      "implot": {
+          "annotation-padding": [
+              2.0,
+              2.0
+          ],
+          "digital-bit-gap": 4.0,
+          "digital-bit-height": 8.0,
+          "error-bar-size": 5.0,
+          "error-bar-weight": 1.5,
+          "fill-alpha": 1.0,
+          "fit-padding": [
+              0.0,
+              0.0
+          ],
+          "label-padding": [
+              5.0,
+              5.0
+          ],
+          "legend-inner-padding": [
+              5.0,
+              5.0
+          ],
+          "legend-padding": [
+              10.0,
+              10.0
+          ],
+          "legend-spacing": [
+              5.0,
+              0.0
+          ],
+          "line-weight": 1.0,
+          "major-grid-size": [
+              1.0,
+              1.0
+          ],
+          "major-tick-len": [
+              10.0,
+              10.0
+          ],
+          "major-tick-size": [
+              1.0,
+              1.0
+          ],
+          "marker-size": 4.0,
+          "marker-weight": 1.0,
+          "minor-alpha": 0.25,
+          "minor-grid-size": [
+              1.0,
+              1.0
+          ],
+          "minor-tick-len": [
+              5.0,
+              5.0
+          ],
+          "minor-tick-size": [
+              1.0,
+              1.0
+          ],
+          "mouse-pos-padding": [
+              10.0,
+              10.0
+          ],
+          "plot-border-size": 1.0,
+          "plot-default-size": [
+              400.0,
+              300.0
+          ],
+          "plot-min-size": [
+              200.0,
+              150.0
+          ],
+          "plot-padding": [
+              10.0,
+              10.0
+          ]
+      }
+  }
+}
