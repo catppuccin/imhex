@@ -8,8 +8,8 @@ from catppuccin import Colour
 OUT_DIR = Path("build")
 OUT_DIR.mkdir(exist_ok=True)
 TEMPLATE_STR = Path("src/flavour-template.json").read_text()
-TRANSPARENCY = 127
-TRANSPARENCY_HEX = format(TRANSPARENCY, "02x")  # Convert transparency to hex format
+OPACITY = 0.5
+OPACITY_HEX = f"{int(OPACITY * 255):02x}"
 
 def palette():
     return {
@@ -19,11 +19,12 @@ def palette():
         } for flavour_method in [Flavour.latte, Flavour.frappe, Flavour.macchiato, Flavour.mocha]
     }
 
-def generate_colour_with_transparency(colour_hex: Colour, alpha: int) -> str:
+def generate_colour_with_transparency(colour_hex: str, alpha_hex: str) -> str:
     """Generate a colour string with transparency."""
     colour = Colour.from_hex(colour_hex)
-    colour_with_transparency = Colour(colour.red, colour.green, colour.blue, alpha)
-    return "#" + colour_with_transparency.hex
+    alpha = int(alpha_hex, 16)
+    colour_with_transparency = colour.opacity(alpha / 255)
+    return colour_with_transparency.hex
 
 if __name__ == "__main__":
     template = Template(TEMPLATE_STR)
@@ -40,13 +41,13 @@ if __name__ == "__main__":
 
         # Generate colour values with transparency
         for colour_name, colour_value in colours.items():
-            if colour_name.endswith(TRANSPARENCY_HEX):
+            if colour_name.endswith(OPACITY_HEX):
                 # Skip colours that already have transparency
                 continue
             if colour_value.startswith("#"):
                 # Generate colour with transparency
-                colour_with_transparency = generate_colour_with_transparency(colour_value.strip("#"), TRANSPARENCY)
-                transparent_colours[colour_name + TRANSPARENCY_HEX] = colour_with_transparency
+                colour_with_transparency = generate_colour_with_transparency(colour_value.strip("#"), OPACITY_HEX)
+                transparent_colours[colour_name + OPACITY_HEX] = colour_with_transparency
 
         # Add the custom values to the transparent_colours dictionary
         transparent_colours["theme_base"] = theme_base
