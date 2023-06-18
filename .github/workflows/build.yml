@@ -5,7 +5,7 @@ on:
     paths:
       - "src/**/*.py"
       - "src/flavour-template.json"
-      - "src/requirements.txt"
+      - "src/pip-requirements.txt"
 
 
 jobs:
