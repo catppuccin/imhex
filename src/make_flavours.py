@@ -31,32 +31,35 @@ def generate_color_with_transparency(color_hex: str) -> str:
 if __name__ == "__main__":
     template = Template(TEMPLATE_STR)
     for flavour, colours in palette().items():
-        # Determine the custom values based on the flavor
+        # Determine the custom values based on the flavour
         theme_base = "Light" if flavour.lower() == "latte" else "Dark"
         image_postfix = f"_{theme_base.lower()}"
         theme_name = f"Catppuccin {flavour.capitalize()}"
         transparent = "#00000000"
         plot_background = f"{colours['blue']}21"
 
-        # Generate color values with transparency
-        for color_name, color_value in colours.items():
+        # Create a copy of the colours dictionary
+        modified_colours = colours.copy()
+
+        # Generate colour values with transparency
+        for color_name, color_value in modified_colours.items():
             if color_name.endswith("7f"):
-                # Skip colors that already have transparency
+                # Skip colours that already have transparency
                 continue
             if color_value.startswith("#"):
-                # Generate color with transparency
+                # Generate colour with transparency
                 color_with_transparency = generate_color_with_transparency(color_value)
-                colours[color_name + "7f"] = color_with_transparency
+                modified_colours[color_name + "7f"] = color_with_transparency
 
-        # Add the custom values to the colours dictionary
-        colours["theme_base"] = theme_base
-        colours["image_postfix"] = image_postfix
-        colours["theme_name"] = theme_name
-        colours["transparent"] = transparent
-        colours["plot_background"] = plot_background
+        # Add the custom values to the modified_colours dictionary
+        modified_colours["theme_base"] = theme_base
+        modified_colours["image_postfix"] = image_postfix
+        modified_colours["theme_name"] = theme_name
+        modified_colours["transparent"] = transparent
+        modified_colours["plot_background"] = plot_background
 
-        # Substitute the template with the updated colours dictionary
-        substituted_template = template.substitute(colours)
+        # Substitute the template with the updated modified_colours dictionary
+        substituted_template = template.substitute(modified_colours)
 
         # Write the substituted template to the output file
         open(OUT_DIR / f"catppuccin-{flavour}.json", 'w').write(substituted_template)
