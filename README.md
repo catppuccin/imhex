@@ -36,7 +36,14 @@
 
 ## Usage
 
-1. Download your preferred flavour from the
+### From ImHex Content Store (Recommended)
+
+1. `Extras -> Content Store -> Themes -> (your preferred flavor)`
+2. `Extras -> Settings -> Interface -> Color Theme -> (your preferred flavor)`
+
+### From GitHub
+
+1. Download your preferred flavor from the
    [latest release](https://github.com/catppuccin/imhex/releases/latest) or
    from the [latest build](https://github.com/catppuccin/imhex/actions/workflows/build.yml).
 2. Move the `catppuccin-*.json` files into:
@@ -45,7 +52,7 @@
 
    If these directories don't work for you, please check what paths are detected in ImHex via:  
    `Help -> About -> ImHex Directories -> Themes`.
-3. In **ImHex**: `Help -> Settings -> Interface -> Color Theme -> (your preferred flavour)`
+3. In **ImHex**: `Extras -> Settings -> Interface -> Color Theme -> (your preferred flavor)`
 
 ## 🙋 FAQ
 
