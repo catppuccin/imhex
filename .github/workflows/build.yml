@@ -18,7 +18,7 @@ jobs:
           python-version: '3.10'
           cache: 'pip' # caching pip dependencies
       - run: pip install -r requirements.txt
-      - run: python src/make_flavours.py
+      - run: python src/catppuccinator.py
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
