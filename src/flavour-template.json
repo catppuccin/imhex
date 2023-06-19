@@ -103,9 +103,9 @@
           "title-bar-selected": "$lavender"
       },
       "implot": {
-          "axis-bg": "$text",
-          "axis-bg-active": "$subtext1",
-          "axis-bg-hovered": "$subtext0",
+          "axis-bg": "$axis_background",
+          "axis-bg-active": "$subtext17f",
+          "axis-bg-hovered": "$subtext07f",
           "axis-grid": "$base",
           "axis-text": "$transparent",
           "axis-tick": "$subtext17f",
