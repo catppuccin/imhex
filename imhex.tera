@@ -1,0 +1,332 @@
+---
+whiskers:
+  version: "2.3.0"
+  matrix:
+   - flavor
+  filename: "themes/catppuccin-{{ flavor.identifier }}.json"
+---
+
+{%- macro eighth(color) -%}
+{{ color | mod(opacity=0.129) | get(key="hex") | upper }}
+{%- endmacro -%}
+
+{%- macro half(color) -%}
+{{ color | mod(opacity=0.5) | get(key="hex") | upper }}
+{%- endmacro -%}
+
+{%- macro full(color) -%}
+{{ color.hex | upper }}FF
+{%- endmacro -%}
+
+{
+  "base": "{% if flavor.dark %}Dark{% else %}Light{% endif %}",
+  "colors": {
+      "imgui": {
+          "border": "#{{ self::full(color=subtext0) }}",
+          "border-shadow": "#{{ self::full(color=subtext1) }}",
+          "button": "#{{ self::half(color=blue) }}",
+          "button-active": "#{{ self::full(color=lavender) }}",
+          "button-hovered": "#{{ self::half(color=sky) }}",
+          "check-mark": "#{{ self::full(color=blue) }}",
+          "child-background": "#{{ self::full(color=mantle) }}",
+          "docking-empty-background": "#{{ self::full(color=base) }}",
+          "docking-preview": "#{{ self::full(color=sky) }}",
+          "drag-drop-target": "#{{ self::full(color=sapphire) }}",
+          "frame-background": "#{{ self::full(color=base) }}",
+          "frame-background-active": "#{{ self::full(color=lavender) }}",
+          "frame-background-hovered": "#{{ self::half(color=sky) }}",
+          "header": "#{{ self::half(color=sapphire) }}",
+          "header-active": "#{{ self::half(color=lavender) }}",
+          "header-hovered": "#{{ self::half(color=sky) }}",
+          "menu-bar-background": "#{{ self::full(color=base) }}",
+          "modal-window-dim-background": "#{{ self::half(color=subtext1) }}",
+          "nav-highlight": "#{{ self::full(color=lavender) }}",
+          "nav-windowing-background": "#{{ self::full(color=text) }}",
+          "nav-windowing-highlight": "#{{ self::full(color=overlay0) }}",
+          "plot-histogram": "#{{ self::full(color=yellow) }}",
+          "plot-histogram-hovered": "#{{ self::half(color=peach) }}",
+          "plot-lines": "#{{ self::full(color=subtext0) }}",
+          "plot-lines-hovered": "#{{ self::half(color=pink) }}",
+          "popup-background": "#{{ self::full(color=base) }}",
+          "resize-grip": "#{{ self::full(color=overlay1) }}",
+          "resize-grip-active": "#{{ self::full(color=lavender) }}",
+          "resize-grip-hovered": "#{{ self::half(color=sky) }}",
+          "scrollbar-background": "#{{ self::full(color=base) }}",
+          "scrollbar-grab": "#{{ self::full(color=overlay1) }}",
+          "scrollbar-grab-active": "#{{ self::full(color=lavender) }}",
+          "scrollbar-grab-hovered": "#{{ self::half(color=sky) }}",
+          "separator": "#{{ self::full(color=overlay1) }}",
+          "separator-active": "#{{ self::full(color=lavender) }}",
+          "separator-hovered": "#{{ self::half(color=sky) }}",
+          "slider-grab": "#{{ self::full(color=overlay0) }}",
+          "slider-grab-active": "#{{ self::full(color=lavender) }}",
+          "tab": "#{{ self::full(color=overlay0) }}",
+          "tab-active": "#{{ self::half(color=lavender) }}",
+          "tab-hovered": "#{{ self::half(color=sky) }}",
+          "tab-unfocused": "#{{ self::half(color=overlay1) }}",
+          "tab-unfocused-active": "#{{ self::half(color=overlay0) }}",
+          "table-border-light": "#{{ self::full(color=overlay1) }}",
+          "table-border-strong": "#{{ self::full(color=overlay2) }}",
+          "table-header-background": "#{{ self::full(color=overlay0) }}",
+          "table-row-background": "#{{ self::full(color=mantle) }}",
+          "table-row-background-alt": "#{{ self::full(color=crust) }}",
+          "text": "#{{ self::full(color=text) }}",
+          "text-disabled": "#{{ self::full(color=overlay1) }}",
+          "text-selected-background": "#{{ self::half(color=surface2) }}",
+          "title-background": "#{{ self::full(color=mantle) }}",
+          "title-background-active": "#{{ self::full(color=mantle) }}",
+          "title-background-collapse": "#{{ self::full(color=mantle) }}",
+          "window-background": "#{{ self::full(color=base) }}"
+      },
+      "imhex": {
+          "desc-button": "#{{ self::full(color=surface1) }}",
+          "desc-button-active": "#{{ self::full(color=lavender) }}",
+          "desc-button-hovered": "#{{ self::half(color=sky) }}",
+          "highlight": "#{{ self::full(color=green) }}",
+          "toolbar-blue": "#{{ self::full(color=blue) }}",
+          "toolbar-brown": "#{{ self::full(color=rosewater) }}",
+          "toolbar-gray": "#{{ self::full(color=overlay1) }}",
+          "toolbar-green": "#{{ self::full(color=green) }}",
+          "toolbar-purple": "#{{ self::full(color=mauve) }}",
+          "toolbar-red": "#{{ self::full(color=red) }}",
+          "toolbar-yellow": "#{{ self::full(color=yellow) }}"
+      },
+      "imnodes": {
+          "box-selector": "#{{ self::full(color=blue) }}",
+          "box-selector-outline": "#{{ self::half(color=blue) }}",
+          "grid-background": "#{{ self::full(color=mantle) }}",
+          "grid-line": "#{{ self::full(color=overlay2) }}",
+          "grid-line-primary": "#{{ self::full(color=overlay1) }}",
+          "link": "#{{ self::full(color=blue) }}",
+          "link-hovered": "#{{ self::full(color=sky) }}",
+          "link-selected": "#{{ self::full(color=lavender) }}",
+          "mini-map-background": "#{{ self::half(color=text) }}",
+          "mini-map-background-hovered": "#{{ self::half(color=subtext0) }}",
+          "mini-map-canvas": "#{{ self::half(color=surface1) }}",
+          "mini-map-canvas-outline": "#{{ self::half(color=surface0) }}",
+          "mini-map-link": "#{{ self::full(color=blue) }}",
+          "mini-map-link-selected": "#{{ self::full(color=lavender) }}",
+          "mini-map-node-background": "#{{ self::half(color=surface2) }}",
+          "mini-map-node-background-hovered": "#{{ self::half(color=surface0) }}",
+          "mini-map-node-background-selected": "#{{ self::full(color=lavender) }}",
+          "mini-map-node-outline": "#{{ self::full(color=overlay1) }}",
+          "mini-map-outline": "#{{ self::half(color=overlay1) }}",
+          "mini-map-outline-hovered": "#{{ self::half(color=subtext1) }}",
+          "node-background": "#{{ self::full(color=overlay0) }}",
+          "node-background-hovered": "#{{ self::half(color=sky) }}",
+          "node-background-selected": "#{{ self::full(color=lavender) }}",
+          "node-outline": "#{{ self::full(color=overlay0) }}",
+          "pin": "#{{ self::half(color=blue) }}",
+          "pin-hovered": "#{{ self::half(color=sky) }}",
+          "title-bar": "#{{ self::full(color=surface0) }}",
+          "title-bar-hovered": "#{{ self::half(color=sky) }}",
+          "title-bar-selected": "#{{ self::full(color=lavender) }}"
+      },
+      "implot": {
+          "axis-bg": "#{{ self::eighth(color=text) }}",
+          "axis-bg-active": "#{{ self::half(color=subtext1) }}",
+          "axis-bg-hovered": "#{{ self::half(color=subtext0) }}",
+          "axis-grid": "#{{ self::full(color=base) }}",
+          "axis-text": "#00000000",
+          "axis-tick": "#{{ self::half(color=subtext1) }}",
+          "crosshairs": "#{{ self::half(color=text) }}",
+          "error-bar": "#00000000",
+          "fill": "#00000000",
+          "frame-bg": "#{{ self::full(color=base) }}",
+          "inlay-text": "#{{ self::full(color=text) }}",
+          "legend-bg": "#{{ self::full(color=overlay0) }}",
+          "legend-border": "#{{ self::full(color=overlay1) }}",
+          "legend-text": "#{{ self::full(color=text) }}",
+          "line": "#00000000",
+          "marker-fill": "#00000000",
+          "marker-outline": "#00000000",
+          "plot-bg": "#{{ self::eighth(color=blue) }}",
+          "plot-border": "#00000000",
+          "selection": "#{{ self::half(color=surface2) }}",
+          "title-text": "#{{ self::full(color=text) }}"
+      },
+      "text-editor": {
+          "background": "#{{ self::full(color=base) }}",
+          "breakpoint": "#{{ self::full(color=red) }}",
+          "char-literal": "#{{ self::full(color=green) }}",
+          "comment": "#{{ self::full(color=overlay0) }}",
+          "current-line-edge": "#{{ self::half(color=overlay1) }}",
+          "current-line-fill": "#{{ self::half(color=overlay1) }}",
+          "current-line-fill-inactive": "#{{ self::half(color=overlay0) }}",
+          "cursor": "#{{ self::full(color=rosewater) }}",
+          "default": "#{{ self::full(color=overlay1) }}",
+          "error-marker": "#{{ self::half(color=red) }}",
+          "identifier": "#{{ self::full(color=overlay2) }}",
+          "keyword": "#{{ self::full(color=mauve) }}",
+          "known-identifier": "#{{ self::full(color=red) }}",
+          "line-number": "#{{ self::full(color=overlay1) }}",
+          "multi-line-comment": "#{{ self::full(color=overlay0) }}",
+          "number": "#{{ self::full(color=peach) }}",
+          "preproc-identifier": "#{{ self::full(color=lavender) }}",
+          "preprocessor": "#{{ self::full(color=subtext0) }}",
+          "punctuation": "#{{ self::full(color=text) }}",
+          "selection": "#{{ self::half(color=surface2) }}",
+          "string": "#{{ self::full(color=green) }}"
+      }
+  },
+  "image_postfix": "_{% if flavor.dark %}dark{% else %}light{% endif %}",
+  "name": "Catppuccin {{ flavor.name }}",
+  "styles": {
+      "imgui": {
+          "alpha": 1.0,
+          "button-text-align": [
+              0.5,
+              0.5
+          ],
+          "cell-padding": [
+              4.0,
+              2.0
+          ],
+          "child-border-size": 1.0,
+          "child-rounding": 0.0,
+          "disabled-alpha": 0.6000000238418579,
+          "frame-border-size": 0.0,
+          "frame-padding": [
+              4.0,
+              3.0
+          ],
+          "frame-rounding": 0.0,
+          "grab-min-size": 12.0,
+          "grab-rounding": 0.0,
+          "indent-spacing": 10.0,
+          "item-inner-spacing": [
+              4.0,
+              4.0
+          ],
+          "item-spacing": [
+              8.0,
+              4.0
+          ],
+          "popup-border-size": 1.0,
+          "popup-rounding": 0.0,
+          "scrollbar-rounding": 9.0,
+          "scrollbar-size": 14.0,
+          "selectable-text-align": [
+              0.0,
+              0.0
+          ],
+          "tab-rounding": 4.0,
+          "window-border-size": 1.0,
+          "window-min-size": [
+              32.0,
+              32.0
+          ],
+          "window-padding": [
+              8.0,
+              8.0
+          ],
+          "window-rounding": 0.0,
+          "window-title-align": [
+              0.0,
+              0.5
+          ]
+      },
+      "imnodes": {
+          "grid-spacing": 24.0,
+          "link-hover-distance": 10.0,
+          "link-line-segments-per-length": 0.10000000149011612,
+          "link-thickness": 3.0,
+          "mini-map-offset": [
+              4.0,
+              4.0
+          ],
+          "mini-map-padding": [
+              8.0,
+              8.0
+          ],
+          "node-border-thickness": 1.0,
+          "node-corner-rounding": 4.0,
+          "node-padding": [
+              8.0,
+              8.0
+          ],
+          "pin-circle-radius": 4.0,
+          "pin-hover-radius": 10.0,
+          "pin-line-thickness": 1.0,
+          "pin-offset": 0.0,
+          "pin-quad-side-length": 7.0,
+          "pin-triangle-side-length": 9.5
+      },
+      "implot": {
+          "annotation-padding": [
+              2.0,
+              2.0
+          ],
+          "digital-bit-gap": 4.0,
+          "digital-bit-height": 8.0,
+          "error-bar-size": 5.0,
+          "error-bar-weight": 1.5,
+          "fill-alpha": 1.0,
+          "fit-padding": [
+              0.0,
+              0.0
+          ],
+          "label-padding": [
+              5.0,
+              5.0
+          ],
+          "legend-inner-padding": [
+              5.0,
+              5.0
+          ],
+          "legend-padding": [
+              10.0,
+              10.0
+          ],
+          "legend-spacing": [
+              5.0,
+              0.0
+          ],
+          "line-weight": 1.0,
+          "major-grid-size": [
+              1.0,
+              1.0
+          ],
+          "major-tick-len": [
+              10.0,
+              10.0
+          ],
+          "major-tick-size": [
+              1.0,
+              1.0
+          ],
+          "marker-size": 4.0,
+          "marker-weight": 1.0,
+          "minor-alpha": 0.25,
+          "minor-grid-size": [
+              1.0,
+              1.0
+          ],
+          "minor-tick-len": [
+              5.0,
+              5.0
+          ],
+          "minor-tick-size": [
+              1.0,
+              1.0
+          ],
+          "mouse-pos-padding": [
+              10.0,
+              10.0
+          ],
+          "plot-border-size": 1.0,
+          "plot-default-size": [
+              400.0,
+              300.0
+          ],
+          "plot-min-size": [
+              200.0,
+              150.0
+          ],
+          "plot-padding": [
+              10.0,
+              10.0
+          ]
+      }
+  }
+}
