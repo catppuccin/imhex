@@ -43,16 +43,8 @@
 
 ### From GitHub
 
-1. Download your preferred flavor from the
-   [latest release](https://github.com/catppuccin/imhex/releases/latest) or
-   from the [latest build](https://github.com/catppuccin/imhex/actions/workflows/build.yml).
-2. Move the `catppuccin-*.json` files into:
-    - **Windows**: `%LocalAppData%\imhex\themes`
-    - **Linux**: `~/.local/share/imhex/themes`
-
-   If these directories don't work for you, please check what paths are detected in ImHex via:  
-   `Help -> About -> ImHex Directories -> Themes`.
-3. In **ImHex**: `Extras -> Settings -> Interface -> Color Theme -> (your preferred flavor)`
+1. Copy your preferred flavor(s) from [`themes/`](./themes/) to either `~/.local/share/imhex/themes` on macOS/Linux or `%LocalAppData%\imhex\themes` on Windows. If these directories don't work for you, please check what your configuration path is in ImHex via **Help** > **About** > **ImHex Directories** > **Themes**.
+2. Set your new flavor in **Extras** > **Settings** > **Interface** > **Color Theme**.
 
 ## 🙋 FAQ
 
@@ -64,8 +56,7 @@
 
 ## 👐 Contributing
 
-1. Install requirements via `pip install -r requirements.txt`
-2. Generate the JSON files via `python src/catppuccinator.py`. The files will be generated under the `build/` directory.
+See https://github.com/catppuccin/toolbox/tree/main/whiskers.
 
 ## 💝 Thanks to
 
